@@ -46,7 +46,7 @@ function App() {
         </div>
       </section>
 
-      <section className="col-span-3 md:col-span-2 row-start-1 md:row-start-1">
+      <section className="col-span-3 md:col-span-2 row-start-1 row-end-2 md:row-start-1 md:row-end-1">
         {panel === null ? (
           <div className="flex h-full w-full flex-col items-center justify-evenly text-left py-1 px-2">
             <div className="w-full space-y-2 md:w-3/5">
