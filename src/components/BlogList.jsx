@@ -5,7 +5,7 @@ function BlogList() {
   const blogs = blogStore((state) => state.blogs);
 
   return (
-    <div className="min-h-screen rounded bg-gradient-to-b from-purple-400 to-purple-200 ">
+    <div className="h-full rounded bg-gradient-to-b from-purple-400 to-purple-200 ">
       {blogs.length > 0 ? (
         <div className=" space-y-2 px-2 py-3">
           {blogs.map((blog) => (
@@ -13,7 +13,7 @@ function BlogList() {
           ))}
         </div>
       ) : (
-        <h1 className="text-3xl p-2 mt-5 text-zinc-100">The blog drawer is empty!</h1>
+        <h1 className="text-2xl md:text-3xl p-2 mt-auto text-zinc-100">The blog drawer is empty!</h1>
       )}
     </div>
   );

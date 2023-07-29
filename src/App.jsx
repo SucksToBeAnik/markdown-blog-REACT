@@ -2,6 +2,8 @@ import BlogList from "./components/BlogList";
 import BlogEdit from "./components/BlogEdit";
 import BlogView from "./components/BlogView";
 import blogStore from "./store";
+import Lottie from 'lottie-react'
+import blog from './assets/blog.json'
 
 function App() {
   const panel = blogStore((state) => state.panel);
@@ -19,8 +21,8 @@ function App() {
   }
 
   return (
-    <main className="grid min-h-screen grid-cols-3">
-      <section className="col-span-3 flex flex-col items-center rounded bg-stone-100 p-2 md:col-span-1">
+    <main className="grid min-h-screen grid-cols-3 gird-rows-2 md:grid-rows-1 gap-10">
+      <section className="col-span-3 row-start-2 md:row-start-1 flex flex-col items-center rounded bg-stone-100 p-2 md:col-span-1">
 
 
         <div className="flex w-full items-center justify-between">
@@ -44,16 +46,20 @@ function App() {
         </div>
       </section>
 
-      <section className="col-span-3 md:col-span-2 ">
+      <section className="col-span-3 md:col-span-2 row-start-1 md:row-start-1">
         {panel === null ? (
-          <div className="flex h-full w-full flex-col items-center justify-center text-left">
+          <div className="flex h-full w-full flex-col items-center justify-evenly text-left py-2 px-2">
             <div className="w-full space-y-2 md:w-3/5">
-              <h1 className="from bg-purple-400 bg-gradient-to-r to-purple-200 bg-clip-text p-3 text-4xl text-transparent md:text-6xl">
+
+              <Lottie animationData={blog} loop={true} className="h-3/5" />
+
+              <h1 className="from bg-purple-400 bg-gradient-to-r to-purple-200 bg-clip-text py-3 text-4xl text-transparent md:text-6xl">
                 Write beautiful blogs!
               </h1>
-              <h2 className="rounded bg-purple-400 p-2 mx-2 my-1 text-2xl text-zinc-100 md:text-4xl">
+              <h2 className="rounded bg-purple-400 p-2 text-2xl text-zinc-100 md:text-4xl">
                 Publish now!
               </h2>
+              <p></p>
             </div>
           </div>
         ) : (
