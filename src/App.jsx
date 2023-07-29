@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <main className="grid min-h-screen grid-cols-3 gird-rows-2 md:grid-rows-1 gap-5">
+    <main className="grid min-h-screen grid-cols-3 gird-rows-2 md:grid-rows-1 gap-2">
       <section className="col-span-3 row-start-2 md:row-start-1 flex flex-col items-center rounded bg-stone-100 p-2 md:col-span-1">
 
 
