@@ -48,7 +48,7 @@ function App() {
 
       <section className="col-span-3 md:col-span-2 row-start-1 md:row-start-1">
         {panel === null ? (
-          <div className="flex h-full w-full flex-col items-center justify-evenly text-left py-2 px-2">
+          <div className="flex h-full w-full flex-col items-center justify-evenly text-left py-1 px-2">
             <div className="w-full space-y-2 md:w-3/5">
 
               <Lottie animationData={blog} loop={true} className="h-3/5" />
@@ -59,7 +59,6 @@ function App() {
               <h2 className="rounded bg-purple-400 p-2 text-2xl text-zinc-100 md:text-4xl">
                 Publish now!
               </h2>
-              <p></p>
             </div>
           </div>
         ) : (
