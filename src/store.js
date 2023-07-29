@@ -27,24 +27,32 @@ const initialBlogs = [
 const initialState = {
   panel: null,
   blogs: initialBlogs,
-  editTitle:'',
+  editTitle: "",
   editContent: "",
-  selectedBlog: null
+  selectedBlog: null,
 };
 
 const blogStore = create((set) => ({
   ...initialState,
   setEditTitle: (title) => set(() => ({ editTitle: title })),
   setEditContent: (content) => set(() => ({ editContent: content })),
-  setSelectedBlog: (blog)=>set(()=>({selectedBlog:blog})),
+  setSelectedBlog: (blog) =>
+    set((state) => {
+      if (blog) {
+        state.setEditTitle(blog.title);
+        state.setEditContent(blog.body);
+      }
+
+      return { selectedBlog: blog };
+    }),
   setPanel: (activePanel) => set(() => ({ panel: activePanel })),
   createBlog: (blog) =>
     set((state) => ({ blogs: [...state.blogs, { id: nanoid(), ...blog }] })),
   updateBlog: (blog) =>
     set((state) => {
       const remainingBlogs = state.blogs.filter((item) => item.id !== blog.id);
-      
-      return {blogs:[blog,...remainingBlogs]}
+
+      return { blogs: [blog, ...remainingBlogs] };
     }),
   deleteBlog: (id) =>
     set((state) => {

@@ -15,8 +15,8 @@ function Blog({ blog }) {
   }
   function handleEdit(){
     setPanel('edit')
-    setEditContent(blog.body)
-    setEditTitle(blog.title)
+    // setEditContent(blog.body)
+    // setEditTitle(blog.title)
     setSelectedBlog(blog)
 
   }
