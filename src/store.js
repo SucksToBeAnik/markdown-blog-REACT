@@ -26,7 +26,7 @@ const initialBlogs = [
 
 const initialState = {
   panel: null,
-  blogs: initialBlogs,
+  blogs: [],
   editTitle: "",
   editContent: "",
   selectedBlog: null,

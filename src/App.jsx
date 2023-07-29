@@ -51,7 +51,7 @@ function App() {
               <h1 className="from bg-purple-400 bg-gradient-to-r to-purple-200 bg-clip-text p-3 text-4xl text-transparent md:text-6xl">
                 Write beautiful blogs!
               </h1>
-              <h2 className="rounded bg-purple-400 p-3 text-2xl text-zinc-100 md:text-4xl">
+              <h2 className="rounded bg-purple-400 p-2 mx-2 my-1 text-2xl text-zinc-100 md:text-4xl">
                 Publish now!
               </h2>
             </div>

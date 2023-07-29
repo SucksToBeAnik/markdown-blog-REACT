@@ -13,7 +13,7 @@ function BlogList() {
           ))}
         </div>
       ) : (
-        <h1 className="text-2xl p-2 text-zinc-100">The blog drawer is empty!</h1>
+        <h1 className="text-3xl p-2 mt-5 text-zinc-100">The blog drawer is empty!</h1>
       )}
     </div>
   );
