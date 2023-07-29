@@ -54,7 +54,7 @@ function BlogView() {
             value={editContent}
             onChange={(e) => setEditContent(e.target.value)}
             placeholder="Write your blog here..."
-            className="w-full h-96 rounded border p-1 md:p-2 shadow-md focus:outline-none"
+            className="w-full h-96 rounded border p-1 md:p-2 focus:outline-none"
           ></textarea>
           <button className="rounded bg-purple-400 text-zinc-100 p-1 md:p-2 w-24 text-md uppercase font-semibold">Save</button>
         </form>
